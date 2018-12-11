@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,13 +10,14 @@ using SalesWebMvc.Models.ViewModels;
 
 namespace SalesWebMvc.Controllers {
     public class HomeController : Controller {
+        
         public IActionResult Index() {
             return View();
         }
 
-        public IActionResult About() {
+        public IActionResult About() {            
             ViewData["Message"] = "Salles Web MVC App from C#";
-            ViewData["Autor"] = "Gabriel Santos";
+            ViewData["Autor"] = "Gabriel Santos";            
             ViewData["e-mail"] = "gab.henriquesantos@gmail.com";
 
             return View();
